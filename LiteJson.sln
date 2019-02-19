@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteJson", "LiteJson\LiteJson.csproj", "{986B6CF3-02C9-4FDE-805A-E7BD9BBFFF82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteJson", "LiteJson\LiteJson.csproj", "{986B6CF3-02C9-4FDE-805A-E7BD9BBFFF82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteJsonTest", "LiteJsonTest\LiteJsonTest.csproj", "{4954D73F-9CBE-4D81-B539-48F522AE583A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiteJsonTest", "LiteJsonTest\LiteJsonTest.csproj", "{4954D73F-9CBE-4D81-B539-48F522AE583A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
