@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using LiteJson;
 
@@ -9,7 +8,7 @@ namespace LiteJsonTest
     {
         static void Main(string[] Args)
         {
-            var text = File.ReadAllText("F:\\test.json");
+            //var text = File.ReadAllText("F:\\test.json");
 
             /*var jobj = JsonConvert.DeserializeJsonObject(@"{
                'CPU': 'Intel',
@@ -21,7 +20,7 @@ namespace LiteJsonTest
                ]
              }");*/
              
-            text = @"{'key' : -1254.5455}";
+            var text = @"{'key' : -1254.5455, 'a':1, 'b':2, 'c':{'c1':'asd'}}";
 
             var jobj = JsonConvert.DeserializeJsonObject(text);
 
@@ -31,6 +30,11 @@ namespace LiteJsonTest
             }
             else
             {
+                foreach (var obj in jobj)
+                {
+                    Console.WriteLine(obj);
+                }
+                
                 Console.WriteLine((double) jobj["key"]);
             }
 

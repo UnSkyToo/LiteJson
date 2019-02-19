@@ -22,6 +22,17 @@ namespace LiteJson
             Value = JValue;
         }
 
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            var Rol5 = ((uint)ValueType.GetHashCode() << 5) | ((uint)Value.GetHashCode() >> 27);
+            return ((int)Rol5 + ValueType.GetHashCode()) ^ Value.GetHashCode();
+        }
+
         public T Get<T>()
         {
             if (Value is T TValue)
@@ -121,7 +132,6 @@ namespace LiteJson
             if (Value.ValueType == JsonValueType.Numeric)
             {
                 return (float)Convert.ChangeType(Value.Value, typeof(float));
-                return (float)Value.Value;
             }
 
             throw new Exception("explicit operator(float) error");
